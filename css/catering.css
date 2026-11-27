@@ -1,0 +1,187 @@
+
+/* MAMBA POINT RESTAURANT — CATERING PAGE */
+
+:root {
+    --black: #111111;
+    --gold: #c9a227;
+    --light-gold: #e2c45e;
+    --cream: #f7f4ed;
+    --white: #ffffff;
+    --text: #333333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+/* MAIN CATERING SECTION */
+
+.Catering-section {
+    width: 90%;
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 35px;
+    background: var(--white);
+    border-top: 5px solid var(--gold);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* MAIN CATERING IMAGE */
+
+.Catering-section > img {
+    grid-column: 1 / -1;
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 4px solid var(--gold);
+}
+
+/* MAIN HEADING */
+
+.Catering-section h1 {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 10px 0 20px;
+    color: var(--black);
+    border-bottom: 2px solid var(--gold);
+    font-size: 36px;
+    text-align: center;
+}
+
+/* CATERING INTRODUCTION */
+
+.catering.item:first-of-type {
+    grid-column: 1 / -1;
+    padding: 25px 30px;
+    background: var(--black);
+    border-left: 5px solid var(--gold);
+    color: var(--white);
+}
+
+.catering.item:first-of-type p {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* INDIVIDUAL SERVICE CARDS */
+
+.catering.item,
+.Catering.item,
+.Catering.Item {
+    min-width: 0;
+    overflow: hidden;
+    background: #fffdf8;
+    border: 1px solid #e5dcc5;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* HOVER EFFECT */
+
+.catering.item:hover,
+.Catering.item:hover,
+.Catering.Item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 20px rgba(0,0,0,0.14);
+}
+
+/* SERVICE PHOTOGRAPHS */
+
+.catering.item img,
+.Catering.item img,
+.Catering.Item img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--gold);
+}
+
+/* SERVICE HEADINGS */
+
+.catering.item h3,
+.Catering.item h3,
+.Catering.Item h3 {
+    margin: 20px 15px 10px;
+    color: var(--black);
+    font-size: 22px;
+}
+
+/* SERVICE DESCRIPTIONS */
+
+.catering.item p,
+.Catering.item p,
+.Catering.Item p {
+    margin: 0;
+    padding: 0 22px 18px;
+    color: #555555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* TABLET LAYOUT */
+
+@media (max-width: 850px) {
+    .Catering-section {
+        width: 94%;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .catering.item img,
+    .Catering.item img,
+    .Catering.Item img {
+        height: 210px;
+    }
+}
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 600px) {
+    .Catering-section {
+        width: 94%;
+        margin: 25px auto;
+        padding: 18px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .Catering-section > img {
+        height: 220px;
+    }
+
+    .Catering-section h1 {
+        font-size: 28px;
+    }
+
+    .catering.item:first-of-type {
+        padding: 20px;
+    }
+
+    .catering.item img,
+    .Catering.item img,
+    .Catering.Item img {
+        height: 220px;
+    }
+}

@@ -1,0 +1,203 @@
+
+/* MAMBA POINT RESTAURANT — MENU PAGE */
+
+:root {
+    --black: #111111;
+    --gold: #c9a227;
+    --light-gold: #e2c45e;
+    --cream: #f7f4ed;
+    --white: #ffffff;
+    --text: #333333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+/* MENU PAGE TITLE */
+
+.page-header {
+    width: 90%;
+    margin: 45px auto 30px;
+    padding: 30px;
+    background: var(--black);
+    border-top: 5px solid var(--gold);
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0;
+    color: var(--gold);
+    font-size: 42px;
+    letter-spacing: 5px;
+}
+
+/* MENU CATEGORY SECTIONS */
+
+section.menu,
+section.Menu {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 45px;
+    padding: 30px;
+    background: var(--white);
+    border-top: 4px solid var(--gold);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* CATEGORY HEADINGS */
+
+section.menu > h2,
+section.Menu > h2 {
+    grid-column: 1 / -1;
+    margin: 0 0 10px;
+    padding-bottom: 15px;
+    color: var(--black);
+    border-bottom: 2px solid var(--gold);
+    font-size: 30px;
+    text-align: center;
+}
+
+/* INDIVIDUAL FOOD CARDS */
+
+.menu.item,
+.food.card {
+    min-width: 0;
+    overflow: hidden;
+    background: #fffdf8;
+    border: 1px solid #e5dcc5;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.menu.item:hover,
+.food.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* FOOD PHOTOGRAPHS */
+
+.menu.item img,
+.food.card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--gold);
+}
+
+/* FOOD NAMES */
+
+.menu.item h3,
+.food.card h3 {
+    margin: 17px 12px 8px;
+    color: var(--black);
+    font-size: 20px;
+}
+
+/* FOOD DESCRIPTIONS */
+
+.menu.item p,
+.food.card p {
+    min-height: 65px;
+    margin: 0 15px 15px;
+    color: #666666;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* FOOD PRICES */
+
+.menu.item strong,
+.food.card strong {
+    display: inline-block;
+    margin: 5px 0 20px;
+    padding: 9px 18px;
+    background: var(--gold);
+    border: 2px solid var(--gold);
+    border-radius: 3px;
+    color: var(--black);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* BLACK AND GOLD BUTTONS */
+
+.menu a,
+.Menu a,
+.menu button,
+.Menu button {
+    display: inline-block;
+    padding: 11px 22px;
+    background: var(--black);
+    border: 2px solid var(--gold);
+    border-radius: 3px;
+    color: var(--gold);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.menu a:hover,
+.Menu a:hover,
+.menu button:hover,
+.Menu button:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* TABLET SCREENS */
+
+@media (max-width: 900px) {
+    section.menu,
+    section.Menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 94%;
+        padding: 22px;
+    }
+}
+
+/* MOBILE SCREENS */
+
+@media (max-width: 600px) {
+    .page-header {
+        width: 94%;
+        padding: 22px;
+    }
+
+    .page-header h1 {
+        font-size: 30px;
+    }
+
+    section.menu,
+    section.Menu {
+        grid-template-columns: 1fr;
+        width: 94%;
+        padding: 18px;
+        gap: 20px;
+    }
+
+    .menu.item img,
+    .food.card img {
+        height: 220px;
+    }
+}
